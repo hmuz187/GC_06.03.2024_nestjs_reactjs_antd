@@ -1,0 +1,63 @@
+@url = http://localhost:2000/v1/access
+
+####getVerifySignUpCode
+POST {{url}}/signup/getVerifyCode
+Content-Type: application/json
+
+{
+    "userEmail": "alex.spencer0209@gmail.com"
+}
+
+####SignUp
+POST {{url}}/signup
+Content-Type: application/json
+
+{
+    "email": "alex.spencer0209@gmail.com",
+    "username": "Minh Hy",
+    "password": "abc123",
+    "verifyCode" : "d86d35"
+}
+
+
+
+####Login
+POST {{url}}/signin
+Content-Type: application/json
+
+{
+    "email": "alex.spencer0209@gmail.com",
+    "password": "abc123"
+}
+
+
+####logOut
+POST {{url}}/logout
+Content-Type: application/json
+h-client-id: 65dd7a302deddf009fcc17d5
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWRkN2EzMDJkZWRkZjAwOWZjYzE3ZDUiLCJlbWFpbCI6ImFsZXguc3BlbmNlcjAyMDlAZ21haWwuY29tIiwiaWF0IjoxNzA5MDE2ODEyLCJleHAiOjE3MDkxODk2MTJ9.TwwW3TdUOw2fFwncurBKTFFq46JEDo2pLr54S_AXr18
+h-rtoken-id : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWRkN2EzMDJkZWRkZjAwOWZjYzE3ZDUiLCJlbWFpbCI6ImFsZXguc3BlbmNlcjAyMDlAZ21haWwuY29tIiwiaWF0IjoxNzA5MDE2OTAyLCJleHAiOjE3MDk2MjE3MDJ9.DLR_pt6nwNv7MQ5pBsrnHFqjnqFJENQaxThnpm8ioXM
+
+
+
+####getVerifyForgotPasswordCode
+POST {{url}}/forgotPassword/getVerifyCode
+Content-Type: application/json
+
+{
+    "userEmail": "alex.spencer0209@gmail.com"
+}
+
+####forgotPassword---change password
+POST {{url}}/forgotPassword
+Content-Type: application/json
+
+{
+    "userEmail": "alex.spencer0209@gmail.com",
+    "password": "abc123456",
+    "verifyCode" : "065034"
+}
+
+
+
+

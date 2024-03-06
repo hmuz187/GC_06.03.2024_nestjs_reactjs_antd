@@ -1,0 +1,7 @@
+
+import * as _ from 'lodash';
+
+
+export const getInfoData = ({fields=[], object={}}) => {
+    return _.pick(object, fields)
+}
